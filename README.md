@@ -1,7 +1,7 @@
 java
 ====
 
-A collection of java code.
+A collection of java code written by me.  All code in this directory, "/java", and its subdirectories are licensed as follows: 
 
 License
 ========
