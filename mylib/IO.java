@@ -28,14 +28,14 @@
  ******************************************************************************/
 
 import java.io.Console;
-import java.io.InputStreamBuffer;
+import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 
 public class IO {
 
    private static BufferedReader input = 
-      new BufferedReader(new InputStreamBuffer(System.in));   
+      new BufferedReader(new InputStreamReader(System.in));   
 
    private IO() {
       //should never be called
@@ -45,7 +45,7 @@ public class IO {
     *NUMBERS - Imteger Types int, long, byte                                  *
     ***************************************************************************/
 
-   public static int readInt(Sting prompt) {
+   public static int readInt(String prompt) {
 
        while(true) {
 
@@ -67,7 +67,7 @@ public class IO {
 
          try {
             System.out.print(prompt + ": ");
-            return Long.pareLong(input.readLine());
+            return Long.parseLong(input.readLine());
          } catch(NumberFormatException e) {
             System.err.print("Not a valid long: ");
          } catch (IOException e) {
@@ -193,7 +193,7 @@ public class IO {
       while(true) {
 
          try {
-            val = input.readLine.toLowerCase();
+            val = input.readLine().toLowerCase();
 
             if(val.equals("yes") || val.equals("y") || 
                val.equals("t") || val.equals("true"))
